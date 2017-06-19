@@ -71,5 +71,16 @@ define('resources/index',["exports"], function (exports) {
     //config.globalResources([]);
   }
 });
+define('book-list',['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.BookList = undefined;
+  class BookList {}
+  exports.BookList = BookList;
+});
 define('text!app.html', ['module'], function(module) { module.exports = "<template><h1>Add book</h1><form submit.trigger=\"addBook()\"><input value.bind=\"bookTitle\" id=\"book-title\" type=\"text\" placeholder=\"book title...\"> <input type=\"submit\" value=\"add\"></form><hr><ul><li repeat.for=\"book of books\">${book.title}</li></ul></template>"; });
+define('text!book-list.html', ['module'], function(module) { module.exports = ""; });
 //# sourceMappingURL=app-bundle.js.map
