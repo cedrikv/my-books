@@ -1,12 +1,20 @@
-define('app',['exports'], function (exports) {
-  'use strict';
+define('app',["exports"], function (exports) {
+  "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
   class App {
+
     constructor() {
-      this.message = 'Hello World!';
+      this.books = [];
+      this.bookTitle = "";
+    }
+
+    addBook() {
+      this.books.push({ title: this.bookTitle });
+      this.bookTitle = "";
+      console.log("Book list ", this.books);
     }
   }
   exports.App = App;
@@ -63,5 +71,5 @@ define('resources/index',["exports"], function (exports) {
     //config.globalResources([]);
   }
 });
-define('text!app.html', ['module'], function(module) { module.exports = "<template><h1>${message}</h1></template>"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template><h1>Add book</h1><form submit.trigger=\"addBook()\"><input value.bind=\"bookTitle\" id=\"book-title\" type=\"text\" placeholder=\"book title...\"> <input type=\"submit\" value=\"add\"></form><hr><ul><li repeat.for=\"book of books\">${book.title}</li></ul></template>"; });
 //# sourceMappingURL=app-bundle.js.map
