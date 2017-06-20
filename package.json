@@ -3,8 +3,8 @@
   "description": "An Aurelia client application.",
   "version": "0.1.0",
   "repository": {
-    "type": "???",
-    "url": "???"
+    "type": "git",
+    "url": "https://github.com/cedrikv/my-books"
   },
   "license": "MIT",
   "dependencies": {
@@ -16,17 +16,19 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "aurelia-cli": "^0.27.0",
-    "aurelia-testing": "^1.0.0-beta.2.0.1",
+    "aurelia-cli": "^0.30.0",
+    "aurelia-testing": "^1.0.0-beta.3.0.1",
     "aurelia-tools": "^1.0.0",
     "browser-sync": "^2.13.0",
     "connect-history-api-fallback": "^1.2.0",
+    "debounce": "^1.0.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-changed-in-place": "^2.0.3",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-notify": "^2.2.0",
+    "gulp-watch": "^4.3.11",
     "minimatch": "^3.0.2",
     "through2": "^2.0.1",
     "uglify-js": "^2.6.3",
@@ -43,8 +45,6 @@
     "babel-register": "^6.9.0",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^2.0.0",
-    "gulp-htmlmin": "^3.0.0",
-    "html-minifier": "^3.2.3",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
