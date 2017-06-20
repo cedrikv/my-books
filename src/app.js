@@ -1,13 +1,21 @@
+import { bindable, inject } from 'aurelia-framework';
+import { BookApi } from 'book-api';
+
+@inject(BookApi)
 export class App {
 
-  constructor() {
-    this.books = [];
+  constructor(bookApi) {
     this.bookTitle = "";
+    this.books = [];
+    this.bookApi = bookApi;
   }
 
   addBook() {
     this.books.push({ title: this.bookTitle });
     this.bookTitle = "";
-    console.log("Book list ", this.books);
+  }
+
+  bind() {
+    this.bookApi.getBooks().then(savedBooks => this.books = savedBooks);
   }
 }
